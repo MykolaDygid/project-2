@@ -1,0 +1,84 @@
+/* 1. Загальні правила для всієї сторінки */
+body {
+    background-color: #1a1f29; /* Комфортний темний фон */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Шрифт без засічок */
+    color: #e2e8f0; /* Світлий колір тексту для контрасту */
+    line-height: 1.6; /* Комфортний міжрядковий інтервал */
+    padding: 200px;
+    max-width: 1200px;
+    margin: 0 auto; /* Центрує весь контент сторінки */
+}
+
+/* 2. Оформлення заголовків */
+#page-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #4ade80; /* Яскравий зелений/бірюзовий колір Анемо */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #facc15; /* Золотавий колір Гео */
+    border-bottom: 2px solid #334155; /* Гарна лінія під підзаголовком */
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #38bdf8; /* Блакитний колір Гідро */
+}
+
+/* 3. Оформлення текстових елементів */
+.intro {
+    font-size: 18px; /* Збільшений шрифт для вступу */
+    font-style: italic; /* Курсивне накреслення */
+    background-color: #242b35; /* Окремий фон для блоку вступу */
+    padding: 15px;
+    border-left: 4px solid #4ade80; /* Акцентна лінія зліва */
+}
+
+.highlight {
+    color: #f87171; /* Акцентний червоний колір Піро для важливих слів */
+}
+
+strong {
+    color: #facc15;
+}
+
+em {
+    color: #c084fc; /* Фіолетовий акцент Електро */
+}
+
+/* 4. Оформлення посилань */
+a {
+    color: #38bdf8;
+    text-decoration: none; /* Прибираємо підкреслення */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Плавна зміна кольору */
+}
+
+a:hover {
+    color: #facc15; /* Зміна кольору при наведенні курсору */
+    text-decoration: underline; /* Поява підкреслення при наведенні */
+}
+
+/* 5. Оформлення списків */
+ul, ol {
+    background-color: #242b35;
+    padding: 20px 40px;
+    border-radius: 8px;
+    width: auto; /* Дозволяє списку розтягуватися на всю ширину батьківського блоку */
+}
+
+li {
+    margin-bottom: 8px;
+    color: #cbd5e1; /* Трохи м'якший колір для пунктів списку */
+}
+
+ul {
+    list-style-type: square; /* Квадратні маркери замість круглих */
+}
