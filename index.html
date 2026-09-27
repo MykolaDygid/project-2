@@ -1,86 +1,129 @@
 <!DOCTYPE html>
 <html lang="uk">
-    <head>
-        <meta charset="UTF-8">
-        <title>Genshin Impact</title>
-        <link rel="stylesheet" href="style.css">
-        
-    </head>
-    <body>
-        <h1>Genshin Impact</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Genshin Impact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <h2>Про гру</h2>
-    <p>
-    <strong>Genshin Impact</strong> це пригодницька рольова гра з відкритим світом. 
-     Гравець бере на себе роль <em>Мандрівника</em>, який шукає свого загубленого близнюка у Тейват.
-    </p>
-        <img src="maxresdefault (1).jpg" alt="Головний постер Genshin Impact" width="600"></img>
+    <!-- Крок 2.1: Головний контейнер-обгортка -->
+    <div class="container">
+        
+        <h1 id="page-title">Genshin Impact</h1>
+
+        <!-- Крок 2.2: Перша картка (Опис) -->
+        <section class="card">
+            <h2>Про гру</h2>
+            <p class="intro">
+                <strong>Genshin Impact</strong> — це пригодницька рольова гра з відкритим світом. 
+                Гравець бере на себе роль <em>Мандрівника</em>, який шукає свого загубленого близнюка у Тейват.
+            </p>
+            <img src="maxresdefault (1).jpg" alt="Головний постер Genshin Impact" class="main-img">
+        </section>
+
+        <!-- Крок 2.2: Друга картка (Стихії та Регіони) -->
+        <section class="card">
             <h2>Елементи та Регіони Тейвату</h2>
 
-    <h3>Основні стихії (Елементи):</h3>
-    <ul>
-        <li>Піро</li>
-        <img src="piro.webp" alt="Піро" width="200"></img>
-        <li>Гідро</li>
-        <img src="hydro.webp" alt="Гідро" width="200"></img>
-        <li>Анемо</li>
-        <img src="anemo.webp" alt="Анемо" width="200"></img>
-        <li>Електро</li>
-        <img src="electro.webp" alt="Електро" width="200"></img>
-        <li>Дендро</li>
-        <img src="dendro.webp" alt="Дендро" width="200"></img>
-        <li>Крио</li>
-        <img src="cryo.webp" alt="Крио" width="200"></img>
-        <li>Гео</li>
-        <img src="geo.webp" alt="Гео" width="200"></img>
-    </ul>
+            <h3>Основні стихії (Елементи):</h3>
+            <ul class="elements-list">
+                <li><img src="piro.webp" alt="Піро"> <span>Піро</span></li>
+                <li><img src="hydro.webp" alt="Гідро"> <span>Гідро</span></li>
+                <li><img src="anemo.webp" alt="Анемо"> <span>Анемо</span></li>
+                <li><img src="electro.webp" alt="Електро"> <span>Електро</span></li>
+                <li><img src="dendro.webp" alt="Дендро"> <span>Дендро</span></li>
+                <li><img src="cryo.webp" alt="Кріо"> <span>Кріо</span></li>
+                <li><img src="geo.webp" alt="Гео"> <span>Гео</span></li>
+            </ul>
 
-    <h3>Регіони для дослідження:</h3>
-    <ol>
-        <li>Мондштадт — місто свободи та вітру.</li>
-        <img src="mondstadt.png" alt="Мондштадт" width="300"></img>
-        <li>Лі Юе — місто контрактів та торгівлі.</li>
-        <img src="li yue.webp" alt="Лі Юе" width="300"></img>
-        <li>Інадзума — закрита електро-нація вічності.</li>
-        <img src="inazuma.webp" alt="Інадзума" width="300"></img>
-        <li>Сумеру — королівство мудрості та рослинності.</li>
-        <img src="sumeru.webp" alt="Сумеру" width="300"></img>
-        <li>Фонтейн — нація справедливості, технологій та води.</li>
-        <img src="fontaine.webp" alt="Фонтейн" width="300"></img>
-        <li>Наталан — земля війни, драконів та вогню.</li>
-        <img src="natlan.webp" alt="Наталан" width="300"></img>
-        <li>Сніжна — засніжене королівство під проводом Цариці.</li>
-        <img src="snezhnaya.jpg" alt="Сніжна" width="300"></img>
-    </ol>
-     <h2>Корисні посилання</h2>
-    <p>
-        Дізнатися більше про гру та завантажити її на ПК чи смартфон можна на 
-        <a href="https://genshin.hoyoverse.com" target="_blank">офіційному сайті Genshin Impact</a>.
-    </p>
-    <h2>Мої улюблені персонажі</h2>
-    <img src="nefer.webp" alt="Нефер" width="150"><img src="aether.jpg" alt="Ітер" width="250">
-    <img src="arlecchino.webp" alt="Арлекіно" width="225">
-    <table border="1" width="700">
-        <tr>
-            <th>Ім'я</th>
-            <th>Елемент</th>
-            <th>Регіон</th>
-        </tr>
-        <tr>
-            <td>Нефер</td>
-            <td>Дендро</td>
-            <td>Сумеру</td>
-        </tr>
-        <tr>
-            <td>Ітер</td>
-            <td>?</td>
-            <td>?</td>
-        </tr>
-        <tr>
-            <td>Арлекіно</td>
-            <td>Піро</td>
-            <td>Сніжна</td>
-        </tr>
-    </table>
-        </body>
+            <h3>Регіони для дослідження:</h3>
+            <ol class="regions-list">
+                <li>
+                    <p>Мондштадт — місто свободи та вітру.</p>
+                    <img src="mondstadt.png" alt="Мондштадт">
+                </li>
+                <li>
+                    <p>Лі Юе — місто контрактів та торгівлі.</p>
+                    <img src="li yue.webp" alt="Лі Юе">
+                </li>
+                <li>
+                    <p>Інадзума — закрита електро-нація вічності.</p>
+                    <img src="inazuma.webp" alt="Інадзума">
+                </li>
+                <li>
+                    <p>Сумеру — королівство мудрості та рослинності.</p>
+                    <img src="sumeru.webp" alt="Сумеру">
+                </li>
+                <li>
+                    <p>Фонтейн — нація справедливості, технологій та води.</p>
+                    <img src="fontaine.webp" alt="Фонтейн">
+                </li>
+                <li>
+                    <p>Наталан — земля війни, драконів та вогню.</p>
+                    <img src="natlan.webp" alt="Наталан">
+                </li>
+                <li>
+                    <p>Сніжна — засніжене королівство під проводом Цариці.</p>
+                    <img src="snezhnaya.jpg" alt="Сніжна">
+                </li>
+            </ol>
+        </section>
+
+        <!-- Крок 2.2 та 2.3: Третя картка (Посилання та Галерея) -->
+        <section class="card">
+            <h2>Корисні посилання</h2>
+            <p>
+                Дізнатися більше про гру та завантажити її на ПК чи смартфон можна на 
+                <a href="https://genshin.hoyoverse.com" target="_blank">офіційному сайті Genshin Impact</a>.
+            </p>
+
+            <h2>Мої улюблені персонажі</h2>
+            <!-- Обгортка галереї за завданням -->
+            <div class="gallery">
+                <img src="nefer.webp" alt="Нефер">
+                <img src="aether2.png" alt="Ітер">
+                <img src="arlecchino2.png" alt="Арлекіно">
+            </div>
+        </section>
+
+        <!-- Крок 2.2: Четверта картка (Таблиця) -->
+        <section class="card">
+            <h2>Характеристики улюблених персонажів</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ім'я</th>
+                        <th>Елемент</th>
+                        <th>Регіон</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Нефер</td>
+                        <td>Дендро</td>
+                        <td>Сумеру</td>
+                    </tr>
+                    <tr>
+                        <td>Ітер</td>
+                        <td>Адаптивний (усі)</td>
+                        <td>Поза Тейвату</td>
+                    </tr>
+                    <tr>
+                        <td>Арлекіно</td>
+                        <td>Піро</td>
+                        <td>Сніжна</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div> <!-- Кінець .container -->
+
+    <footer>
+        <p>&copy; 2026 Практична робота №3. Виконав студент курсу "Основи web-розробки".</p>
+    </footer>
+
+</body>
 </html>
+
