@@ -1,15 +1,20 @@
 /* ==========================================================================
-   Крок 1. Глобальне скидання, скрол та модель border-box
+   Глобальне скидання, плавний скрол та модель border-box
    ========================================================================== */
 html {
-    scroll-behavior: smooth;    /* Крок 2.1: Плавне прокручування сайту */
-    scroll-padding-top: 95px;   /* Крок 2.1: Хедер не перекриває заголовки при скролі */
+    scroll-behavior: smooth;
+    scroll-padding-top: 95px;
 }
 
 *, *::before, *::after {
-    box-sizing: border-box;     /* Завдання ПР3: модель border-box */
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+/* Крок 4.1: Явне встановлення блочного типу для нових семантичних елементів */
+main, section, article, aside, header, footer, nav {
+    display: block;
 }
 
 body {
@@ -17,11 +22,10 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif; 
     color: #e2e8f0; 
     line-height: 1.6; 
-    padding-top: 100px;         /* Крок 2.1: Компенсація висоти фіксованого хедера */
+    padding-top: 100px;         
     padding-bottom: 40px;
 }
 
-/* Контейнер-обгортка для обмеження ширини та центрування (Крок 3.1 з ПР3) */
 .container {
     max-width: 950px;
     margin: 0 auto;
@@ -29,24 +33,24 @@ body {
 }
 
 /* ==========================================================================
-   Крок 2. Одновимірна верстка хедер-меню за допомогою Flexbox
+   Одновимірна верстка хедер-меню (Flexbox)
    ========================================================================== */
 .site-header {
-    position: fixed;            /* Крок 2.2: Фіксоване позиціонування */
+    position: fixed;            
     top: 0;
     left: 0;
-    width: 100%;                /* Розтягуємо на всю ширину екрана */
+    width: 100%;                
     height: 70px;
-    background-color: #242b35;  /* Власний фоновий колір хедера */
+    background-color: #242b35;  
     border-bottom: 2px solid #334155;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    z-index: 1000;              /* Крок 2.2: Високий z-index для перекриття шарів */
+    z-index: 1000;              
 }
 
 .header-container {
-    display: flex;              /* Крок 2.3: Вмикаємо Flexbox */
-    justify-content: space-between; /* Логотип — ліворуч, навігація — праворуч */
-    align-items: center;        /* Центруємо елементи по вертикалі */
+    display: flex;              
+    justify-content: space-between; 
+    align-items: center;        
     max-width: 950px;
     height: 100%;
     margin: 0 auto;
@@ -56,15 +60,15 @@ body {
 .logo {
     font-size: 19px;
     font-weight: bold;
-    color: #4ade80;             /* Анемо колір для назви */
+    color: #4ade80;             
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .nav-menu ul {
-    display: flex;              /* Крок 2.4: Горизонтальний ряд навігації */
-    gap: 15px;                  /* Однаковий простір між кнопками меню */
-    list-style: none;           /* Прибираємо стандартні маркери списку */
+    display: flex;              
+    gap: 15px;                  
+    list-style: none;           
 }
 
 .nav-menu a {
@@ -78,17 +82,17 @@ body {
 }
 
 .nav-menu a:hover {
-    color: #facc15;             /* Золотий колір Гео при наведенні */
-    background-color: #1a1f29;  /* Фоновий маркер при ховері */
+    color: #facc15;             
+    background-color: #1a1f29;  
 }
 
 /* ==========================================================================
-   Крок 3. Двовимірна верстка галереї за допомогою CSS Grid
+   Двовимірна верстка галереї за допомогою CSS Grid
    ========================================================================== */
 .grid-gallery {
-    display: grid;              /* Крок 3.1: Вмикаємо двовимірний CSS Grid */
-    grid-template-columns: repeat(3, 1fr); /* Крок 3.2: Три однакові колонки */
-    gap: 20px;                  /* Крок 3.3: Сучасні проміжки між карток */
+    display: grid;              
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;                  
     margin-top: 20px;
 }
 
@@ -102,36 +106,35 @@ body {
 }
 
 .grid-gallery img {
-    width: 100%;                /* Крок 3.4: Гумові адаптивні картинки */
-    height: 240px;              /* Фіксована висота картинок галереї */
-    object-fit: cover;          /* Акуратне кадрування фото без стискання */
+    width: 100%;                
+    height: 1000px;              
+    object-fit: cover;          
     display: block;
     transition: transform 0.3s ease;
 }
 
 .grid-gallery img:hover {
-    transform: scale(1.03);     /* Легке збільшення при наведенні */
+    transform: scale(1.03);     
 }
 
 .char-name {
     margin-top: 10px;
     font-weight: bold;
-    color: #38bdf8;             /* Гідро колір для назви персонажа */
+    color: #38bdf8;             
 }
 
 /* ==========================================================================
-   Крок 4. Оформлення тематичних блоків та Локальне позиціонування
+   Оформлення тематичних блоків та Позиціонування
    ========================================================================== */
 .card {
     background-color: #242b35;
-    padding: 35px 25px;         /* Крок 4.1: Однаковий вертикальний ритм (padding) */
+    padding: 35px 25px;         
     border: 1px solid #334155;
     border-radius: 12px;
     margin-bottom: 25px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Крок 4.2: Візуальне відокремлення парних секцій (чергування кольору фону) */
 .card:nth-of-type(even) {
     background-color: #1f262f; 
 }
@@ -144,17 +147,35 @@ body {
     padding-bottom: 8px;
 }
 
-/* Крок 4.3: Локальне позиціонування інформаційного бейджа (relative) */
-.badge-parent {
-    position: relative;         /* Батьківський контейнер стає якорем для бейджа */
+/* Крок 4.2: Оформлення доданого довідкового блоку <aside> */
+.useful-note {
+    background-color: #1e293b;       /* М'який пастельний темний фон */
+    border-left: 4px solid #facc15;  /* Яскрава золотава вертикальна лінія зліва */
+    padding: 20px;                   /* Внутрішні відступи */
+    border-radius: 0 8px 8px 0;
+    margin: 20px 0;                  /* Зовнішній вертикальний ритм */
+    font-style: italic;              /* Курсивний шрифт за завданням */
+    font-size: 14.5px;               /* Зменшений комфортний розмір шрифту */
+    color: #cbd5e1;
 }
 
-/* Крок 4.3: Абсолютне позиціонування бейджа (absolute) */
+.useful-note h4 {
+    font-style: normal;
+    color: #facc15;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Локальне позиціонування бейджа */
+.badge-parent {
+    position: relative;         
+}
+
 .badge {
     position: absolute;         
-    top: 12px;                  /* Координати розташування у верхньому кутку */
+    top: 12px;                  
     right: 12px;
-    background-color: #f87171;  /* Яскравий червоний колір Піро */
+    background-color: #f87171;  
     color: #ffffff;
     font-size: 11px;
     font-weight: bold;
@@ -164,7 +185,7 @@ body {
     z-index: 5;
 }
 
-/* Стилізація мікро-компонентів: Текст, Списки, Таблиці */
+/* Інші мікро-елементи */
 .intro {
     font-size: 16px;
     background-color: #1a1f29;
@@ -176,7 +197,7 @@ body {
 
 .elements-list {
     list-style-type: none;
-    display: flex;              /* Flexbox для горизонтального списку елементів */
+    display: flex;              
     flex-wrap: wrap;
     gap: 15px;
     margin: 15px 0 25px;
@@ -190,7 +211,7 @@ body {
     flex-direction: column;
     align-items: center;
     font-size: 13px;
-    width: calc(14.28% - 13px); /* 7 елементів ділять рядок порівну */
+    width: calc(14.28% - 13px); 
 }
 
 .elements-list img { width: 40px; height: 40px; margin-bottom: 5px; }
@@ -202,7 +223,6 @@ body {
     border-radius: 8px; border: 1px solid #334155;
     margin-top: 8px; display: block;
 }
-.gallery-item img { height: 600px; object-fit: cover; border-radius: 8px; }
 
 table {
     width: 100%; border-collapse: collapse;
@@ -212,35 +232,43 @@ th, td { padding: 12px 15px; border: 1px solid #334155; }
 th { background-color: #2e3746; color: #facc15; font-weight: bold; }
 
 .main-img { max-width: 100%; height: auto; border-radius: 8px; margin-top: 15px; }
-footer { text-align: center; color: #64748b; font-size: 14px; margin-top: 40px; }
 
-/* ==========================================================================
-   Крок 5. Плаваюча кнопка повернення наверх (Позиціонування fixed)
-   ========================================================================== */
+/* Оформлення підвалу сторінки */
+.site-footer {
+    text-align: center; 
+    color: #64748b; 
+    font-size: 14px; 
+    margin-top: 50px;
+    border-top: 1px solid #334155;
+    padding-top: 20px;
+}
+
+.site-footer p {
+    margin-bottom: 5px;
+}
+
+/* Плаваюча кнопка (Position: fixed) */
 .scroll-top-btn {
-    position: fixed;            /* Крок 5.2: Фіксоване позиціонування відносно вікна */
-    bottom: 25px;               /* Координата відступу знизу */
-    right: 25px;                /* Координата відступу справа */
+    position: fixed;            
+    bottom: 25px;               
+    right: 25px;                
     width: 45px;
     height: 45px;
-    background-color: #4ade80;  /* Початковий колір */
+    background-color: #4ade80;  
     color: #1a1f29;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    
-    /* Крок 5.3: Flexbox для ідеального центрування стрілки всередині */
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    border-radius: 50%;         /* Крок 5.3: Форма ідеального кола */
+    border-radius: 50%;         
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 999;
     transition: all 0.25s ease;
 }
 
 .scroll-top-btn:hover {
-    background-color: #facc15;  /* Зміна кольору при наведенні (:hover) */
-    transform: translateY(-4px); /* Легкий інтерактивний підйом кнопки вгору */
+    background-color: #facc15;  
+    transform: translateY(-4px); 
 }

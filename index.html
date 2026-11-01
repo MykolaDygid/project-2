@@ -1,20 +1,30 @@
 <!DOCTYPE html>
+<!-- Крок 2.1: Мова документа для правильної вимови синтезаторами мови (uk) -->
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Genshin Impact — Путівник Мандрівника</title>
-    <!-- Підключення зовнішнього файлу стилів (Крок 1 ПР2) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Крок 3.1: Налаштування SEO мета-тегів (до 60 символів у Title) -->
+    <title>Genshin Impact — Огляд та Путівник по Тейвату</title>
+    <meta name="description" content="Детальний путівник по Genshin Impact. Огляд регіонів, елементів, стихій Тейвату та характеристики улюблених персонажів гри.">
+    <meta name="keywords" content="Genshin Impact, Тейват, Мандрівник, Арлекіно, Невіллет, стихії, регіони">
+    <meta name="author" content="Ваше Прізвище та Ім'я">
+    
+    <!-- Крок 3.2: Підключення іконки вкладки сайту (Favicon) -->
+    <link rel="icon" href="https://hoyoverse.com" type="image/x-icon">
+    
+    <!-- Підключення зовнішнього файлу стилів -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Крок 1.1: Фіксоване хедер-меню -->
+    <!-- Крок 1.1: Ізоляція шапки та навігації з атрибутом доступності -->
     <header class="site-header">
         <div class="header-container">
-            <!-- Назва сайту зліва -->
             <div class="logo">Genshin Impact Wiki</div>
-            <!-- Навігація справа -->
-            <nav class="nav-menu">
+            <!-- Навігація огорнута в <nav> з aria-label для скрінрідерів -->
+            <nav class="nav-menu" aria-label="Головне меню сайту">
                 <ul>
                     <li><a href="#about">Про гру</a></li>
                     <li><a href="#elements">Стихії та Регіони</a></li>
@@ -25,100 +35,107 @@
         </div>
     </header>
 
-    <!-- Головний контейнер-обгортка для контенту -->
-    <div class="container">
+    <!-- Крок 1.2: Головний унікальний стрижневий контейнер сторінки -->
+    <main id="main-content">
+        <div class="container">
 
-        <!-- Крок 1.2: Секція "Про гру" з унікальним ID -->
-        <section id="about" class="card">
-            <h2>Про гру</h2>
-            <p class="intro">
-                <strong>Genshin Impact</strong> — це пригодницька рольова гра з відкритим світом. 
-                Гравець бере на себе роль <em>Мандрівника</em>, який шукає свого загубленого близнюка у Тейват.
-            </p>
-            <img src="maxresdefault (1).jpg" alt="Головний постер Genshin Impact" class="main-img">
-        </section>
+            <!-- Крок 1.3: Велика тематична секція "Про гру" на базі <section> -->
+            <section id="about" class="card">
+                <h2>Про гру</h2>
+                <p class="intro">
+                    <strong>Genshin Impact</strong> — це пригодницька рольова гра з відкритим світом. 
+                    Гравець бере на себе роль <em>Мандрівника</em>, який шукає свого загубленого близнюка у Тейват.
+                </p>
+                <!-- Крок 2.2: Оптимізація та лаконічний опис зображення в alt -->
+                <img src="maxresdefault (1).jpg" alt="Офіційний постер Genshin Impact з Мандрівниками та Паймон на фоні краєвиду" class="main-img">
+            </section>
 
-        <!-- Крок 1.2: Секція "Стихії та Регіони" -->
-        <section id="elements" class="card">
-            <h2>Елементи та Регіони Тейвату</h2>
+            <!-- Крок 1.3: Друга семантична секція -->
+            <section id="elements" class="card">
+                <h2>Елементи та Регіони Тейвату</h2>
 
-            <h3>Основні стихії (Елементи):</h3>
-            <!-- Одновимірне вирівнювання іконок через Flexbox -->
-            <ul class="elements-list">
-                <li><img src="piro.webp" alt="Піро"> <span>Піро</span></li>
-                <li><img src="hydro.webp" alt="Гідро"> <span>Гідро</span></li>
-                <li><img src="anemo.webp" alt="Анемо"> <span>Анемо</span></li>
-                <li><img src="electro.webp" alt="Електро"> <span>Електро</span></li>
-                <li><img src="dendro.webp" alt="Дендро"> <span>Дендро</span></li>
-                <li><img src="cryo.webp" alt="Кріо"> <span>Кріо</span></li>
-                <li><img src="geo.webp" alt="Гео"> <span>Гео</span></li>
-            </ul>
+                <h3>Основні стихії (Елементи):</h3>
+                <ul class="elements-list">
+                    <li><img src="piro.webp" alt="Іконка стихії Піро (Вогонь)"> <span>Піро</span></li>
+                    <li><img src="hydro.webp" alt="Іконка стихії Гідро (Вода)"> <span>Гідро</span></li>
+                    <li><img src="anemo.webp" alt="Іконка стихії Анемо (Вітер)"> <span>Анемо</span></li>
+                    <li><img src="electro.webp" alt="Іконка стихії Електро (Блискавка)"> <span>Електро</span></li>
+                    <li><img src="dendro.webp" alt="Іконка стихії Дендро (Природа)"> <span>Дендро</span></li>
+                    <li><img src="cryo.webp" alt="Іконка стихії Кріо (Лід)"> <span>Кріо</span></li>
+                    <li><img src="geo.webp" alt="Іконка стихії Гео (Земля)"> <span>Гео</span></li>
+                </ul>
 
-            <h3>Регіони для дослідження:</h3>
-            <ol class="regions-list">
-                <li><p>Мондштадт — місто свободи та вітру.</p><img src="mondstadt.png" alt="Мондштадт"></li>
-                <li><p>Лі Юе — місто контрактів та торгівлі.</p><img src="li yue.webp" alt="Лі Юе"></li>
-                <li><p>Інадзума — закрита електро-нація вічності.</p><img src="inazuma.webp" alt="Інадзума"></li>
-                <li><p>Сумеру — королівство мудрості та рослинності.</p><img src="sumeru.webp" alt="Сумеру"></li>
-                <li><p>Фонтейн — нація справедливості, технологій та води.</p><img src="fontaine.webp" alt="Фонтейн"></li>
-                <li><p>Наталан — земля війни, драконів та вогню.</p><img src="natlan.webp" alt="Наталан"></li>
-                <li><p>Сніжна — засніжене королівство под проводом Цариці.</p><img src="snezhnaya.jpg" alt="Сніжна"></li>
-            </ol>
-        </section>
+                <h3>Регіони для дослідження:</h3>
+                <!-- Крок 1.4: Виділення довідкового блоку <aside> всередині секції -->
+                <aside class="useful-note">
+                    <h4>💡 Цікавий факт про Тейват</h4>
+                    <p>Кожен із 7 регіонів Тейвату має свій реальний прототип у нашому світі: наприклад, Мондштадт натхненний середньовічною Німеччиною, Лі Юе — стародавнім Китаєм, а Фонтейн — Францією епохи Белль Епок.</p>
+                </aside>
 
-        <!-- Крок 1.2 та 1.3: Секція "Галерея" з двовимірною Grid-сіткою та бейджем -->
-        <section id="gallery" class="card">
-            <h2>Мої улюблені персонажі</h2>
-            <p>Дізнатися більше про них можна на <a href="https://hoyoverse.com" target="_blank">офіційному сайті Genshin Impact</a>.</p>
-            
-            <!-- Крок 1.3: Контейнер для CSS Grid сітки -->
-            <div class="grid-gallery">
-                <!-- Картка Арлекіно з локальним позиціонуванням бейджа -->
-                <div class="gallery-item badge-parent">
-                    <!-- Крок 4.3: Абсолютно позиціонований інформаційний бейдж -->
-                    <span class="badge">ТОП ПІРО</span>
-                    <img src="arlecchino.webp" alt="Арлекіно">
-                    <p class="char-name">Арлекіно</p>
+                <ol class="regions-list">
+                    <li><p>Мондштадт — місто свободи та вітру.</p><img src="mondstadt.png" alt="Величні вітряки та собор у місті Мондштадт"></li>
+                    <li><p>Лі Юе — місто контрактів та торгівлі.</p><img src="li yue.webp" alt="Гавань Лі Юе з традиційною китайською архітектурою під час свята ліхтарів"></li>
+                    <li><p>Інадзума — закрита електро-нація вічності.</p><img src="inazuma.webp" alt="Місто Інадзума на тлі квітучої сакури та палацу Сьогуна Райден"></li>
+                    <li><p>Сумеру — королівство мудрості та рослинності.</p><img src="sumeru.webp" alt="Тропічні ліси та величне місто Академії Сумеру на гігантському дереві"></li>
+                    <li><p>Фонтейн — нація справедливості, технологій та води.</p><img src="fontaine.webp" alt="Високотехнологічне європейське місто Фонтейн із великими акведуками та фонтанами"></li>
+                    <li><p>Наталан — земля війни, драконів та вогню.</p><img src="natlan.webp" alt="Скелясті краєвиди та племінні поселення вогняної нації Наталан"></li>
+                    <li><p>Сніжна — засніжене королівство під проводом Цариці.</p><img src="snezhnaya.jpg" alt="Концепт-арт величного засніженого палацу нації Кріо"></li>
+                </ol>
+            </section>
+
+            <!-- Крок 1.3: Третя семантична секція з трансформацією в <article> -->
+            <section id="gallery" class="card">
+                <h2>Мої улюблені персонажі</h2>
+                <p>Дізнатися більше про них можна на <a href="https://hoyoverse.com" target="_blank">офіційному сайті Genshin Impact</a>.</p>
+                
+                <div class="grid-gallery">
+                    <!-- Картки персонажів тепер є семантичними автономними блоками <article> -->
+                    <article class="gallery-item badge-parent">
+                        <span class="badge">ХІТ 4.6</span>
+                        <img src="arlecchino.webp" alt="Ігровий портрет персонажа Арлекіно у повний зріст">
+                        <p class="char-name">Арлекіно</p>
+                    </article>
+                    <article class="gallery-item">
+                        <img src="nefer.webp" alt="Ігровий портрет Голови Куроторія Таємниць Нефер у повний зріст">
+                        <p class="char-name">Нефер</p>
+                    </article>
+                    <article class="gallery-item">
+                        <img src="aether.jpg" alt="Головний герой гри Ітер з одноручним мечем у руках">
+                        <p class="char-name">Ітер</p>
+                    </article>
                 </div>
-                <div class="gallery-item">
-                    <img src="nefer.webp" alt="Нефер">
-                    <p class="char-name">Нефер</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="aether.jpg" alt="Ітер">
-                    <p class="char-name">Ітер</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Крок 1.2: Секція "Характеристики" (Таблиця з ПР3) -->
-        <section id="table" class="card">
-            <h2>Характеристики улюблених персонажів</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Ім'я</th>
-                        <th>Елемент</th>
-                        <th>Регіон</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Невіллет</td><td>Гідро</td><td>Фонтейн</td></tr>
-                    <tr><td>Ітер</td><td>Адаптивний (усі)</td><td>Поза Тейватом</td></tr>
-                    <tr><td>Арлекіно</td><td>Піро</td><td>Сніжна</td></tr>
-                </tbody>
-            </table>
-        </section>
+            <!-- Крок 1.3: Четверта семантична секція -->
+            <section id="table" class="card">
+                <h2>Характеристики улюблених персонажів</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ім'я</th>
+                            <th>Елемент</th>
+                            <th>Регіон</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Нефер</td><td>Дендро</td><td>Нот Край</td></tr>
+                        <tr><td>Ітер</td><td>Адаптивний (усі)</td><td>Поза Тейватом</td></tr>
+                        <tr><td>Арлекіно</td><td>Піро</td><td>Сніжна</td></tr>
+                    </tbody>
+                </table>
+            </section>
 
-    </div> <!-- Кінець .container -->
+        </div> <!-- / .container -->
+    </main> <!-- / Крок 1.2: Кінець тега <main> -->
 
-    <!-- Фінальний підвал сторінки (Footer) -->
-    <footer>
-        <p>&copy; 2026 Практична робота №4. Виконав студент курсу "КІПЗс-25-2".</p>
+    <!-- Крок 1.5: Оформлення семантичного підвалу сторінки (Footer) -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Практична робота №5. Дисципліна: Основи web-розробки.</p>
+        <p>Виконав студент групи КН-24, контактна адреса: student@example.com</p>
     </footer>
 
-    <!-- Крок 5: Плаваюча кнопка повернення наверх -->
-    <a href="#" class="scroll-top-btn" title="Повернутися на початок">&#8593;</a>
+    <!-- Крок 2.3: Плаваюча кнопка з обов'язковим aria-label для скрінрідерів -->
+    <a href="#" class="scroll-top-btn" aria-label="Повернутися на початок сторінки" title="Повернутися на початок">&#8593;</a>
 
 </body>
 </html>
