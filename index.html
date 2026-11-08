@@ -1,29 +1,23 @@
 <!DOCTYPE html>
-<!-- Крок 2.1: Мова документа для правильної вимови синтезаторами мови (uk) -->
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Крок 3.1: Налаштування SEO мета-тегів (до 60 символів у Title) -->
     <title>Genshin Impact — Огляд та Путівник по Тейвату</title>
     <meta name="description" content="Детальний путівник по Genshin Impact. Огляд регіонів, елементів, стихій Тейвату та характеристики улюблених персонажів гри.">
     <meta name="keywords" content="Genshin Impact, Тейват, Мандрівник, Арлекіно, Невіллет, стихії, регіони">
     <meta name="author" content="Ваше Прізвище та Ім'я">
     
-    <!-- Крок 3.2: Підключення іконки вкладки сайту (Favicon) -->
     <link rel="icon" href="https://hoyoverse.com" type="image/x-icon">
     
-    <!-- Підключення зовнішнього файлу стилів -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Крок 1.1: Ізоляція шапки та навігації з атрибутом доступності -->
     <header class="site-header">
         <div class="header-container">
             <div class="logo">Genshin Impact Wiki</div>
-            <!-- Навігація огорнута в <nav> з aria-label для скрінрідерів -->
             <nav class="nav-menu" aria-label="Головне меню сайту">
                 <ul>
                     <li><a href="#about">Про гру</a></li>
@@ -35,18 +29,15 @@
         </div>
     </header>
 
-    <!-- Крок 1.2: Головний унікальний стрижневий контейнер сторінки -->
     <main id="main-content">
         <div class="container">
 
-            <!-- Крок 1.3: Велика тематична секція "Про гру" на базі <section> -->
             <section id="about" class="card">
                 <h2>Про гру</h2>
                 <p class="intro">
                     <strong>Genshin Impact</strong> — це пригодницька рольова гра з відкритим світом. 
                     Гравець бере на себе роль <em>Мандрівника</em>, який шукає свого загубленого близнюка у Тейват.
                 </p>
-                <!-- Крок 2.2: Оптимізація та лаконічний опис зображення в alt -->
                 <img src="maxresdefault (1).jpg" alt="Офіційний постер Genshin Impact з Мандрівниками та Паймон на фоні краєвиду" class="main-img">
             </section>
 
@@ -66,9 +57,8 @@
                 </ul>
 
                 <h3>Регіони для дослідження:</h3>
-                <!-- Крок 1.4: Виділення довідкового блоку <aside> всередині секції -->
                 <aside class="useful-note">
-                    <h4>💡 Цікавий факт про Тейват</h4>
+                    <h4>Цікавий факт про Тейват</h4>
                     <p>Кожен із 7 регіонів Тейвату має свій реальний прототип у нашому світі: наприклад, Мондштадт натхненний середньовічною Німеччиною, Лі Юе — стародавнім Китаєм, а Фонтейн — Францією епохи Белль Епок.</p>
                 </aside>
 
@@ -83,13 +73,11 @@
                 </ol>
             </section>
 
-            <!-- Крок 1.3: Третя семантична секція з трансформацією в <article> -->
             <section id="gallery" class="card">
                 <h2>Мої улюблені персонажі</h2>
                 <p>Дізнатися більше про них можна на <a href="https://hoyoverse.com" target="_blank">офіційному сайті Genshin Impact</a>.</p>
                 
                 <div class="grid-gallery">
-                    <!-- Картки персонажів тепер є семантичними автономними блоками <article> -->
                     <article class="gallery-item badge-parent">
                         <span class="badge">ХІТ 4.6</span>
                         <img src="arlecchino.webp" alt="Ігровий портрет персонажа Арлекіно у повний зріст">
@@ -125,13 +113,78 @@
                 </table>
             </section>
 
-        </div> <!-- / .container -->
+        </div> 
+        <section id="feedback" class="card">
+            <h2>Анкета Мандрівника</h2>
+            <p>Залиште свій відгук про Тейват або оберіть улюблений регіон для майбутніх гайдів сайту!</p>
+            
+            <!-- Двигун форми: метод POST для безпеки та конфіденційності даних -->
+            <form action="https://httpbin.org" method="POST" class="interactive-form">
+                
+                <!-- Групування логічних блоків за допомогою <fieldset> та <legend> -->
+                <fieldset class="form-group">
+                    <legend>Основна інформація</legend>
+                    
+                    <!-- Явний зв'язок label + input через атрибути for та id -->
+                    <div class="input-box">
+                        <label for="traveler-name">Ім'я Мандрівника (нікнейм):</label>
+                        <input type="text" id="traveler-name" name="username" placeholder="Введіть ваш нікнейм у грі" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="traveler-email">Електронна пошта:</label>
+                        <input type="email" id="traveler-email" name="user_email" placeholder="user@mail.com" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>Ігрові вподобання</legend>
+                    
+                    <!-- Компактний вибір через семантичні теги <select> та <option> -->
+                    <div class="input-box">
+                        <label for="favorite-region">Улюблений регіон Тейвату:</label>
+                        <select id="favorite-region" name="fav_region" required>
+                            <option value="">-- Оберіть варіант --</option>
+                            <option value="mondstadt">Мондштадт</option>
+                            <option value="li_yue">Лі Юе</option>
+                            <option value="inazuma">Інадзума</option>
+                            <option value="sumeru">Сумеру</option>
+                            <option value="fontaine">Фонтейн</option>
+                            <option value="natlan">Наталан</option>
+                            <option value="snezhnaya">Сніжна</option>
+                        </select>
+                    </div>
+
+                    <!-- Одиночний вибір (Radio buttons) з однаковим параметром name -->
+                    <div class="input-box-radio">
+                        <span class="radio-title">Ваш ігровий сервер:</span>
+                        <label><input type="radio" name="server" value="europe" checked> Європа</label>
+                        <label><input type="radio" name="server" value="asia"> Азія</label>
+                        <label><input type="radio" name="server" value="america"> Америка</label>
+                    </div>
+                </fieldset>
+
+                <!-- Багаторядкове текстове поле <textarea> -->
+                <div class="input-box">
+                    <label for="traveler-message">Ваше побажання або розлогий відгук:</label>
+                    <textarea id="traveler-message" name="message" rows="4" placeholder="Напишіть, на якого персонажа ви найбільше чекаєте наступний гайд..."></textarea>
+                </div>
+
+                <!-- Двигун дії: кнопки управління формою з явним вказанням type -->
+                <div class="form-buttons">
+                    <button type="submit" class="btn-submit">Відправити анкету</button>
+                    <button type="reset" class="btn-reset">Очистити</button>
+                </div>
+                
+            </form>
+        </section>
+
     </main> <!-- / Крок 1.2: Кінець тега <main> -->
 
     <!-- Крок 1.5: Оформлення семантичного підвалу сторінки (Footer) -->
     <footer class="site-footer">
-        <p>&copy; 2026 Практична робота №5. Дисципліна: Основи web-розробки.</p>
-        <p>Виконав студент групи КН-24, контактна адреса: student@example.com</p>
+        <p>&copy; 2026 Практична робота №5. Дисципліна: Інженерія програмного забезпечення.</p>
+        <p>Виконав студент групи КІПЗс-25-2, контактна адреса: mikoladigid@gmail.com</p>
     </footer>
 
     <!-- Крок 2.3: Плаваюча кнопка з обов'язковим aria-label для скрінрідерів -->
